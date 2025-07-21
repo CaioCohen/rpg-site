@@ -1,3 +1,8 @@
+import PageWrapper from "../../components/layout/PageWrapper";
+
 export default function Lores() {
-  return <h1>Lores</h1>;
+  return (
+  <PageWrapper>
+    <h1>Lores</h1>
+  </PageWrapper>);
 }

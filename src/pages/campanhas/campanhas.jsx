@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useData } from '../../context/DataProvider';
 import { useNavigate } from 'react-router-dom';
 import './campanhas.css';
+import PageWrapper from '../../components/layout/PageWrapper';
+import CampanhaCard from '../../components/CampanhaCard';
 
 const Campanhas = () => {
   const { data, loading, error } = useData();
   const navigate = useNavigate();
 
   const { setCampanhaSelecionada } = useData();
+
+  const resetCampanhaSelecionada = () => {
+    sessionStorage.removeItem("campanhaSelecionada");
+    setCampanhaSelecionada(null);
+  }
+
+  useEffect(() => {
+    resetCampanhaSelecionada();
+  }, []);
 
   const handleSelect = (nomeCampanha) => {
     sessionStorage.setItem("campanhaSelecionada", nomeCampanha);
@@ -20,20 +31,20 @@ const Campanhas = () => {
   if (!data) return <p>Nenhuma campanha carregada.</p>;
 
   return (
-    <div className="container">
-      <div className="component-box">
-        <h2>Selecione uma Campanha</h2>
-        <ul>
-          {data.map((item) => (
-            <li key={item.nome}>
-              <button onClick={() => handleSelect(item.nome)}>
-                {item.nome}
-              </button>
-            </li>
-          ))}
-        </ul>
+    <PageWrapper>
+      <h2>Selecione uma Campanha</h2>
+      <div className="campanha-grid">
+        {data.map((item) => (
+          <CampanhaCard
+            key={item.nome}
+            nome={item.nome}
+            urlImagem={item.info.urlImage}
+            onClick={() => handleSelect(item.nome)}
+          />
+        ))}
       </div>
-    </div>
+    </PageWrapper>
+
   );
 };
 

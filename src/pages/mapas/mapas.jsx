@@ -1,3 +1,8 @@
+import PageWrapper from "../../components/layout/PageWrapper";
+
 export default function Mapas() {
-  return <h1>Mapas</h1>;
+  return (
+  <PageWrapper>
+    <h1>Mapas</h1>
+  </PageWrapper>);
 }

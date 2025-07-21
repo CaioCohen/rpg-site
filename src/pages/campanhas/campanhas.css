@@ -1,21 +1,7 @@
-.container {
+.campanha-grid {
   display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  padding: 40px 20px;
-}
-
-.component-box {
-  background-color: rgba(0, 0, 0, 0.7); /* preto transparente */
-  padding: 30px;
-  border-radius: 12px;
-  max-width: 800px;
-  width: 100%;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  color: white;
-}
-
-.component-box h2 {
-  text-align: center;
-  margin-bottom: 20px;
+  margin-top: 30px;
 }

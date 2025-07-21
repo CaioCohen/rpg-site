@@ -1,0 +1,16 @@
+.page-container {
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - 80px);
+  padding: 0px 20px;
+}
+
+.page-box {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 1000px;
+  width: 100%;
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
