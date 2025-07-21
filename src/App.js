@@ -6,12 +6,18 @@ import Sessoes from './pages/sessoes/sessoes';
 import Lore from './pages/lores/lores';
 import Combate from './pages/combate/combate';
 import Mapas from './pages/mapas/mapas';
-import Navbar from './components/navbar'; // (crie depois, se ainda não criou)
+import Navbar from './components/navbar';
+import RequireCampanha from './components/requireCampanha';
+import { useData } from './context/DataProvider';
 
 function App() {
+
+  const { campanhaSelecionada } = useData();
+
   return (
-    <>
-      <Navbar />
+    <RequireCampanha>
+      {campanhaSelecionada && <Navbar />}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/campanhas" element={<Campanhas />} />
@@ -21,7 +27,7 @@ function App() {
         <Route path="/combate" element={<Combate />} />
         <Route path="/mapas" element={<Mapas />} />
       </Routes>
-    </>
+    </RequireCampanha>
   );
 }
 
