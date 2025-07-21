@@ -1,0 +1,28 @@
+.mapas-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.mapa-item {
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+.mapa-item h2 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: white;
+}
+
+.mapa-item img {
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+  object-fit: fill;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+}

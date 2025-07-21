@@ -31,13 +31,13 @@
 /* Cores da navbar */
 
 .navbar-vermelha {
-  background-color: rgba(180, 0, 0, 0.8);
+  background-color: rgba(180, 0, 0, 1);
 }
 
 .navbar-azul {
-  background-color: rgba(0, 0, 180, 0.8);
+  background-color: rgba(0, 0, 180, 1);
 }
 
 .navbar-verde {
-  background-color: rgba(0, 140, 0, 0.8);
+  background-color: rgba(0, 140, 0, 1);
 }

@@ -1,0 +1,48 @@
+.card-detalhado {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  overflow: hidden;
+  width: 300px;
+  color: white;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.card-detalhado:hover {
+  transform: scale(1.02);
+}
+
+.card-detalhado-img {
+  width: 100%;
+  height: 18rem;
+  object-fit: fill;
+}
+
+.card-detalhado-titulo {
+  padding: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+.card-detalhado-descricao {
+  padding: 12px;
+  height: 120px; /* altura fixa */
+  overflow-y: auto;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  scrollbar-width: thin;
+  scrollbar-color: #666 transparent;
+}
+
+.card-detalhado-descricao::-webkit-scrollbar {
+  width: 6px;
+}
+
+.card-detalhado-descricao::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}

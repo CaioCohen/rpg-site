@@ -1,5 +1,7 @@
 import PageWrapper from "../../components/layout/PageWrapper";
+import LinkCard from "../../components/LinkCard";
 import { useData } from "../../context/DataProvider";
+import owlbearImg from "../../assets/imgs/owlbear.jpg";
 
 export default function Home() {
 
@@ -23,13 +25,11 @@ export default function Home() {
   return (
   <PageWrapper>
     <p>{filteredData.info.descricao}</p>
-    <a
-      href={filteredData.info.linkGrid}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="campanha-link"
-    >
-      Abrir Grid
-    </a>
+    <LinkCard
+    imagem={owlbearImg}
+    titulo="Entrar no Grid"
+    link={filteredData.info.linkGrid}
+    descricao="Grid de batalhas utilizado na campanha"
+    />
   </PageWrapper>);
 }

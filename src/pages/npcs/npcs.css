@@ -1,0 +1,37 @@
+.npcs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.npcs-filtros {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.npcs-filtros button {
+  padding: 10px 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid white;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.npcs-filtros button:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.npcs-filtros button.ativo {
+  background-color: white;
+  color: black;
+  border: 2px solid #ffffff;
+  transform: scale(1.05);
+}
+
