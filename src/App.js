@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/home/home';
+import Campanhas from './pages/campanhas/campanhas';
+import Npcs from './pages/npcs/npcs';
+import Sessoes from './pages/sessoes/sessoes';
+import Lore from './pages/lores/lores';
+import Combate from './pages/combate/combate';
+import Mapas from './pages/mapas/mapas';
+import Navbar from './components/navbar'; // (crie depois, se ainda não criou)
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/campanhas" element={<Campanhas />} />
+        <Route path="/npcs" element={<Npcs />} />
+        <Route path="/sessoes" element={<Sessoes />} />
+        <Route path="/lore" element={<Lore />} />
+        <Route path="/combate" element={<Combate />} />
+        <Route path="/mapas" element={<Mapas />} />
+      </Routes>
+    </>
   );
 }
 
