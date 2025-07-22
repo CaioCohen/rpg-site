@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <DataProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/rpg-site">
         <App />
       </BrowserRouter>
     </DataProvider>
