@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/rpg-site/static/css/main.5bf72732.css",
+    "main.js": "/rpg-site/static/js/main.4f44979c.js",
+    "static/media/owlbear.jpg": "/rpg-site/static/media/owlbear.57da694c60b3e6b7241e.jpg",
+    "index.html": "/rpg-site/index.html",
+    "main.5bf72732.css.map": "/rpg-site/static/css/main.5bf72732.css.map",
+    "main.4f44979c.js.map": "/rpg-site/static/js/main.4f44979c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5bf72732.css",
+    "static/js/main.4f44979c.js"
+  ]
+}
