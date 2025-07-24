@@ -24,7 +24,7 @@ export default function Sessoes() {
           <Accordion.Item eventKey={index.toString()} key={sessao.titulo}>
             <Accordion.Header>{sessao.titulo}</Accordion.Header>
             <Accordion.Body>
-              <p>{sessao.descricao}</p>
+              <div dangerouslySetInnerHTML={{ __html: sessao.descricao }} />
             </Accordion.Body>
           </Accordion.Item>
         ))}

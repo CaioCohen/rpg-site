@@ -25,7 +25,7 @@ const { data, campanhaSelecionada } = useData();
           <Accordion.Item eventKey={index.toString()} key={lore.titulo}>
             <Accordion.Header>{lore.titulo}</Accordion.Header>
             <Accordion.Body>
-              <p>{lore.descricao}</p>
+              <div dangerouslySetInnerHTML={{ __html: lore.descricao }} />
             </Accordion.Body>
           </Accordion.Item>
         ))}
